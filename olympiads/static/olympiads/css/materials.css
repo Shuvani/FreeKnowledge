@@ -1,0 +1,121 @@
+/*Styles-----------------------------------------------------------------------*/
+.m-t-3{
+    margin-top: 3vh;
+}
+.partial-secondary-header-font{
+    /*Заголовки табиц*/
+    font-size: var(--partial-secondary-header);
+}
+
+/*Links-----------------------------------------------------------------------*/
+.external-link{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.external-link:hover{
+    font-weight: bold;
+}
+.external-link:visited{
+    color: var(--primary-color);
+}
+
+/*Headers----------------------------------------------------------------------*/
+.headers {
+    /*Стиль для заголовков*/
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+/*Boxes----------------------------------------------------------------------*/
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+
+/*Main content---------------------------------------------------------------*/
+.materials-content-container {
+    /*весь контент помещен в это поле*/
+    display: flex;
+    justify-content: center;
+}
+.partial-main-container {
+    /*весь контент помещен в это поле*/
+    margin: 2vh 2vw 0 2vw;
+    padding-bottom: 6vh;
+}
+
+/*Navigation bar-----------------------------------------------------------*/
+.materials-navigation {
+    /*навигация по таблицам*/
+    font-size: 1.15vw;
+    height: 60vh;
+    margin-top: 2vh;
+    overflow-y: scroll;
+    position: fixed;
+    width: 8vw;
+    z-index: 1;
+}
+.materials-navigation-element {
+    /*Ссылка на нужную таблицу*/
+    color: var(--link-color);
+    display: block;
+    text-decoration: none;
+    padding-bottom: 2vh;
+}
+.materials-navigation-element:hover {
+    /*При наведении меняет цвет*/
+    color: var(--primary-color);
+}
+
+/*Olympiads materials---------------------------------------------------------*/
+.olympiads-materials {
+    /*Блок таблиц с материалами*/
+    margin-left: 10vw;
+}
+.materials-content{
+    /*Каждая таблица с заголовком*/
+    margin-bottom: 3vh;
+    position: relative;
+}
+
+/*Table--------------------------------------------------------------------*/
+.materials-table{
+    /*Стили таблицы*/
+    background: #fff;
+    border-collapse: collapse;
+    text-align: center;
+}
+.timetable-table-header {
+    /*Заголовок таблицы*/
+    background: var(--secondary-color);
+    border: 0.1vh solid var(--secondary-color);
+}
+.materials-columns-header {
+    /*Ячеейки заголовков таблицы*/
+    margin: 0.5vh 1vw;
+    font-size: var(--additional-header);
+    font-weight: normal;
+    width: 10vw;
+}
+.timetable-row {
+    /*Строки таблицы*/
+    border: 0.1vh solid rgba(0, 0, 0, 0.20);
+    border-collapse: collapse;
+    font-size: 1.15vw;
+}
+.materials-cell {
+    /*Год проведения*/
+    margin: 1vh 0;
+}
+.timetable-cell {
+    /*Ячейки таблицы с материалами*/
+    margin: 1vh 1vw;
+    width: 10vw;
+}
+.materials {
+    /*Сами буковки материалов*/
+    display: inline-block;
+    margin: 0 1vw;
+}

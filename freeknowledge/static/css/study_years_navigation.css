@@ -1,0 +1,33 @@
+/*Boxes------------------------------------------------------------------------*/
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+
+/*Study-year navigation--------------------------------------------------------*/
+.study-years-wrapper {
+    /*Коробка с меню классов*/
+    font-size: var(--additional-header);
+    margin: 3vh auto 1vh auto;
+    width: 40%;
+}
+.study-years {
+    /*Контейнер для сылок классов*/
+    display: flex;
+    justify-content: space-around;
+}
+.year{
+    /*Ссылка с названием класса*/
+    color: var(--link-color);
+    padding: 1em 1em;
+    text-decoration: none;
+}
+.year:hover {
+    /*При наведении на ссылку с названием класса*/
+    color: var(--primary-color);
+}
+.active-year {
+    font-weight: bold;
+    color: var(--primary-color);
+}

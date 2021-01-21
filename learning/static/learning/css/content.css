@@ -1,0 +1,104 @@
+/*Styles-----------------------------------------------------------------------*/
+.m-b-1 {
+    margin-bottom: 1vh;
+}
+.m-b-2 {
+    margin-bottom: 2vh;
+}
+.p-l-15 {
+    padding-left: 1.5vw;
+}
+.partial-secondary-header-font{
+    /*Заголовки блоков страницы*/
+    font-size: var(--partial-secondary-header);
+}
+.regular-font {
+    font-size: var(--regular-text);
+}
+
+/*Headers----------------------------------------------------------------------*/
+.headers {
+    /*Стиль для заголовков*/
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+/*Boxes------------------------------------------------------------------------*/
+.content-box {
+    /*Блок с контекстом*/
+    padding: 1.5vh 1vw 1vh 1vw;
+}
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+.learning-navigation-box {
+    display: inline-block;
+}
+.learning-theory-box {
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+}
+.inline-block-box{
+    display: inline-block;
+    width: 100%;
+}
+
+/*Main content---------------------------------------------------------------*/
+.partial-main-container {
+    /*весь контент помещен в это поле*/
+    margin: 2vh 2vw 0 2vw;
+    padding-bottom: 6vh;
+}
+
+/*Navigation------------------------------------------------------------------*/
+.learning-navigation {
+    margin-bottom: 2vh;
+}
+.learning-navigation-section {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--additional-header);
+    color: var(--link-color);
+}
+.learning-navigation-section:hover {
+    color: var(--primary-color);
+}
+
+/*Video--------------------------------------------------------------------------*/
+.learning-video-container {
+    margin: 4vh auto;
+    width: 50%;
+    height: 20%;
+}
+.learning-video {
+    position: relative;
+    padding-bottom: 75%; /* 16:9 */
+    height: 0;
+}
+.learning-video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.solution-video-container {
+    margin: 2vh 0;
+    width: 25%;
+    height: 10%;
+}
+
+/*Answer--------------------------------------------------------------------------*/
+.triangle-list::before {
+    content: '▶ ';
+    color: var(--primary-color);
+}
+.triangle-list.open::before {
+    content: '▼ ';
+}
+.invisible {
+    display: none;
+}

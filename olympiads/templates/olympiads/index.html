@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'olympiads/css/index.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'olympiads/css/index_media.css' %}" type="text/css">
+{% endblock %}
+
+{% block study-years-navigation %}{% endblock %}
+
+{% block content %}
+<div class="whole-main-container">
+    <div class="main-content-container">
+        <!--site description-->
+        <section class="site-description-box content-box shadow-box">
+            <header><h1 class="headers primary-header-font freeknowledge-header">Свободное знание</h1></header>
+            <article class="content-font">
+                <p class="paragraph">
+                    Сайт <b>"Свободное знание"</b> представляет собой платформу для самостоятельного
+                    обучения по школьным предметам.
+                </p>
+                <p class="paragraph">
+                    Учебные материалы, представленные на нём, структурированы как по направлениям подготовки:
+                    <b>"Олимпиады"</b>, <b>"ЕГЭ"</b>, <b>"ОГЭ"</b>, так и по темам изучаемого предмета: разделы
+                    <b>"Обучение"</b>, <b>"Видео"</b>, <b>"Пособия"</b>. В разделе <b>"Спасибо"</b> вы можете
+                    оставить свой отзыв или пожелания, а также поддержать развитие проекта и
+                    воспользоваться формой обратной связи.
+                </p>
+                <p class="paragraph">
+                    В правой колонке есть ссылки на наши телеграм-каналы. На канале
+                    <b>"Знай свободно"</b> мы напоминаем о предстоящих рейтинговых
+                    олимпиадах и днях открытых дверей известных вузов России. Данная информация может
+                    оказаться полезной для учеников 7-11 классов и их родителей. На канале
+                    <b>"Свободное знание"</b> мы делимся научно-просветительской
+                    и культурно-обогащающей информацией, которая показалась нам интересной и полезной,
+                    со всеми желающими. Желаем вам приятного и вдохновенного обучения и развития!
+                </p>
+            </article>
+        </section>
+
+        <aside class="right-content-block">
+
+            <!--telegram-->
+            <section class="telegram-box content-box shadow-box">
+                <header class="telegram-header-container m-b-1">
+                    <img src="{% static 'olympiads\img\telegram.jpg' %}" alt="Telegram" class="telegram-img">
+                    <h2 class="headers telegram-header secondary-header-font">Наши телеграм-каналы</h2>
+                </header>
+                <article class="content-font">
+                    <div class="m-b-1">
+                        <a href="https://t.me/knowfree" target="_blank" class="external-link">Знай свободно</a>
+                        <div>(канал про олимпиады, ЕГЭ и поступление)</div>
+                    </div>
+                    <div class="m-b-1">
+                        <a href="https://t.me/knowledgefree" target="_blank" class="external-link">Свободное знание</a>
+                        <div>(на этом канале мы делимся тем, что понравилось)</div>
+                    </div>
+                </article>
+            </section>
+
+            <!--nearest olympiads table-->
+            {% if events|length != 0 %}
+            <section class="nearest-olympiads-box content-box shadow-box">
+                <header><h2 class="headers secondary-header-font">График ближайших олимпиад</h2></header>
+                <article class="content-font">
+                    <table class="nearest-olympiads-table m-b-1">
+                        <tr class="nearest-olympiads-table-header">
+                            <th><div class="nearest-olympiads-columns-header">Олимпиада</div></th>
+                            <th><div class="nearest-olympiads-columns-header">Этап</div></th>
+                            <th><div class="nearest-olympiads-columns-header">Дата проведения</div></th>
+                        </tr>
+                        {% for event in events %}
+                        <tr class="nearest-olympiads-row">
+                            <td><div title="{{ event.title }}" class="nearest-olympiads-cell">{{ event.short_name }}</div></td>
+                            <td><div class="nearest-olympiads-cell">{{ event.stage }}</div></td>
+                            <td><div class="nearest-olympiads-cell">{{ event.date_interval }}</div></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </article>
+            </section>
+            {% endif %}
+
+            <!--news-->
+            <section class="news-box content-box shadow-box">
+                <header><h2 class="headers secondary-header-font">Новости</h2></header>
+                <article class="news-content content-font">
+                    <ul>
+                        {% for element in news %}
+                            <li class="m-b-1">{{ element.news_content }}</li>
+                        {% endfor %}
+                    </ul>
+                </article>
+            </section>
+
+        </aside>
+    </div>
+</div>
+{% endblock %}

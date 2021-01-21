@@ -1,0 +1,23 @@
+{% if 'olympiads/' in request.path%}
+<nav class="study-years-wrapper">
+    <div class="study-years shadow-box">
+        <a class="year {% if 'materials/7' in request.path%} active-year {% endif %}" href="{% url 'materials' grade=7 %}">7 класс</a>
+        <a class="year{% if 'materials/8' in request.path%} active-year {% endif %}" href="{% url 'materials' grade=8 %}">8 класс</a>
+        <a class="year{% if 'materials/9' in request.path%} active-year {% endif %}" href="{% url 'materials' grade=9 %}">9 класс</a>
+        <a class="year{% if 'materials/10' in request.path%} active-year {% endif %}" href="{% url 'materials' grade=10 %}">10 класс</a>
+        <a class="year{% if 'materials/11' in request.path%} active-year {% endif %}" href="{% url 'materials' grade=11 %}">11 класс</a>
+    </div>
+</nav>
+{% endif %}
+
+{% if 'learning/' in request.path%}
+<nav class="study-years-wrapper">
+    <div class="study-years shadow-box">
+        <a class="year {% if 'learning/7' in request.path%} active-year {% endif %}" href="{% url 'learning_topics' grade=7 %}">7 класс</a>
+        <a class="year{% if 'learning/8' in request.path%} active-year {% endif %}" href="{% url 'learning_topics' grade=8 %}">8 класс</a>
+        <a class="year{% if 'learning/9' in request.path%} active-year {% endif %}" href="{% url 'learning_topics' grade=9 %}">9 класс</a>
+        <a class="year{% if 'learning/10' in request.path%} active-year {% endif %}" href="{% url 'learning_topics' grade=10 %}">10 класс</a>
+        <a class="year{% if 'learning/11' in request.path%} active-year {% endif %}" href="{% url 'learning_topics' grade=11 %}">11 класс</a>
+    </div>
+</nav>
+{% endif %}

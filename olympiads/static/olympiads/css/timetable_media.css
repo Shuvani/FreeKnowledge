@@ -1,0 +1,59 @@
+@media (max-width: 1200px) {
+    /*Styles--------------------------*/
+    .partial-secondary-header-font{
+        font-size: calc(1.4*var(--partial-secondary-header));
+    }
+    /*Boxes------------------------------------------------------------------------*/
+    .content-box {
+        padding: 3vh 1vw 1vh 1vw;
+    }
+    /*Timetable----------------------*/
+    .timetable-table-header {
+        font-size: calc(1.4*var(--additional-header));
+    }
+    .timetable-row {
+        font-size: calc(1.3*1.15vw);
+    }
+}
+@media (max-width: 854px) {
+    /*Styles--------------------------*/
+    .partial-secondary-header-font{
+        font-size: 1.1rem;
+    }
+    /*Timetable----------------------*/
+    .timetable {
+        overflow-x: scroll;
+    }
+    .timetable-table-header {
+        font-size: 0.9rem;
+    }
+    .timetable-row {
+        font-size: 0.8rem;
+    }
+    .timetable-cell {
+        margin: 1vh 1vw;
+        min-width: 250px;
+    }
+    /*Images--------------------------*/
+    .central-picture {
+        width: 65vw;
+    }
+}
+@media (max-width: 768px) {
+    /*Images--------------------------*/
+    .central-picture {
+        width: 75vw;
+    }
+}
+@media (max-width: 600px) {
+    /*Images--------------------------*/
+    .central-picture {
+        width: 100vw;
+    }
+}
+@media (max-height: 600px) {
+    /*Main content--------------------*/
+    .partial-main-container{
+        padding-bottom: 3rem;
+    }
+}

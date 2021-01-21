@@ -1,0 +1,117 @@
+@media ( max-width: 1200px) {
+    /*Header--------------------------------*/
+    .header-container{
+        height: 5vh;
+    }
+    .bar {
+        display: block;
+        position: absolute;
+        top: -0.5vh;
+        left: 0.5vh;
+        width: 5vh;
+        height: 5vh;
+        overflow: hidden;
+    }
+    .bar span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 5vh;
+        color: #fff;
+    }
+    .bar span:nth-child(2) {
+        background: var(--primary-color);
+        line-height: 6vh;
+        font-size: 4vh;
+    }
+    .bar span.active {
+        transform: translateY(-100%);
+    }
+    .nav-menu{
+        /*вся полоса текста меню навигации*/
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 4px 0 rgba(0,0,0,0.25);
+        display: block;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 5vh;
+        visibility: hidden;
+        width: 100%;
+        z-index: 2;
+    }
+    .nav-item{
+        /*элементы меню навигации*/
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    .nav-item:hover {
+        /*элементы меню навигации при наведении меняют фон*/
+        background-color: var(--hover-color);
+    }
+    .nav-item > a {
+        /*текст ссылок меню*/
+        display: block;/*чтобы к друг-другу не липли*/
+        font-size: 1.3rem;
+        padding: 0.6rem;
+    }
+    .nav-item > a:hover {
+        /*текст ссылок меню при наведении меняет цвет*/
+        color: #000;
+    }
+    a.active{
+        /*выделить активный раздел меню*/
+        font-weight: bold;
+        box-shadow: 0 5px 50px rgba(0,0,0,0.25), 0 5px 28px rgba(0,0,0,0.22);
+    }
+    a.active::after {
+        /*подчеркнуть активный раздел меню*/
+        display: none;
+    }
+    /*при открытии контент меню становится виден*/
+    .nav-menu.active{
+        left: 0;
+        visibility: visible;
+    }
+    ul.nav-menu.active:after {
+        display: none;
+    }
+    /*Footer----------------------------*/
+    .footer-container{
+        font-size: 0.8rem;
+    }
+    .contacts{
+        /*текст контактов*/
+        margin: 0.9vh 3vw;
+    }
+}
+@media (max-width: 768px) {
+    .nav-item > a {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 600px) {
+    .nav-item > a {
+        font-size: 1rem;
+    }
+}
+@media (max-height: 500px) {
+    /*Header--------------------------------*/
+    .header-container{
+        height: 1.5rem;
+    }
+    .bar {
+        top: 0.1rem;
+        left: 0.4rem;
+        width: 1rem;
+        height: 1rem;
+    }
+    .bar span {
+        font-size: 1.2rem;
+    }
+    .nav-menu{
+        top: 1.5rem;
+    }
+}

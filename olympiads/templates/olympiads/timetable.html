@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'olympiads/css/timetable.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'olympiads/css/timetable_media.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation_media.css' %}" type="text/css">
+{% endblock %}
+
+{% block study-years-navigation %}
+    {% include 'inc/_study-years-navigation.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="partial-main-container">
+
+        <!--timetable-->
+        <section>
+            <div class="timetable content-box">
+                <header><h2 class="headers partial-secondary-header-font">График олимпиад</h2></header>
+                <article>
+                    <table class="shadow-box table">
+                        <tr class="timetable-table-header">
+                            <th><div class="timetable-columns-header">Олимпиада</div></th>
+                            <th><div class="timetable-columns-header">Этап</div></th>
+                            <th><div class="timetable-columns-header">Дата проведения</div></th>
+                            <th><div class="timetable-columns-header">Сайт олимпиады</div></th>
+                        </tr>
+                        {% for key, values in rows.items %}
+                        <tr class="timetable-row">
+                            <td><div class="timetable-cell">{{ key }}</div></td>
+                            <td>
+                                {% for value in values %}
+                                <div class="timetable-cell">{{ value.stage }}</div>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                {% for value in values %}
+                                <div class="timetable-cell">{{ value.date_interval }}</div>
+                                {% endfor %}
+                            </td>
+                            <td><a class="external-link" href="{{ values.0.link }}" target="_blank">{{ values.0.short_name }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </article>
+            </div>
+        </section>
+
+        <!--images-->
+        <section class="chart">
+            <div class="content-box">
+                <header><h2 class="headers partial-secondary-header-font">Что дают олимпиады</h2></header>
+                <article class="olympiads-levels">
+                    <img alt="Олимпиады 1 уровня" class="central-picture" src="{% static 'olympiads\img\FirstLevel.png' %}">
+                    <img alt="Олимпиады 2 уровня" class="central-picture" src="{% static 'olympiads\img\OtherLevels.png' %}">
+                </article>
+            </div>
+        </section>
+    </div>
+{% endblock %}

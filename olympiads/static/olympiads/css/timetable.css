@@ -1,0 +1,84 @@
+/*Styles-----------------------------------------------------------------------*/
+.partial-secondary-header-font{
+    /*Заголовки блоков страницы*/
+    font-size: var(--partial-secondary-header);
+}
+
+/*Links-----------------------------------------------------------------------*/
+.external-link{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.external-link:hover{
+    font-weight: bold;
+}
+.external-link:visited{
+    color: var(--primary-color);
+}
+
+/*Headers----------------------------------------------------------------------*/
+.headers {
+    /*Стиль для заголовков*/
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+/*Boxes------------------------------------------------------------------------*/
+.content-box {
+    /*Блок с контекстом*/
+    padding: 1.5vh 1vw 1vh 1vw;
+}
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+
+/*Main content---------------------------------------------------------------*/
+.partial-main-container {
+    /*весь контент помещен в это поле*/
+    margin: 2vh 2vw 0 2vw;
+    padding-bottom: 6vh;
+}
+
+/*Timetable----------------------------------------------------------------------*/
+.table {
+    /*контейнер для таблицы*/
+    background: #fff;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+.timetable-table-header {
+    /*Заголовок таблицы*/
+    background: var(--secondary-color);
+    border: 0.1vh solid var(--secondary-color);
+    font-size: var(--additional-header);
+}
+.timetable-columns-header {
+    /*Ячейки в заголовке таблицы*/
+    margin: 0.7vh 0;
+}
+.timetable-row {
+    /*Строки таблицы*/
+    border: 0.1vh solid rgba(0, 0, 0, 0.20);
+    border-collapse: collapse;
+    font-size: 1.15vw;
+}
+.timetable-cell {
+    /*Ячейки таблицы*/
+    margin: 1vh 1vw;
+}
+
+/*Images---------------------*/
+.olympiads-levels {
+    /*Контейнер для картинок внизу страницы*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.central-picture {
+    /*Картинки внизу страницы*/
+    width: 45vw;
+}

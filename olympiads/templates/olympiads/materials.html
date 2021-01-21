@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'olympiads/css/materials.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'olympiads/css/materials_media.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation_media.css' %}" type="text/css">
+{% endblock %}
+
+{% block study-years-navigation %}
+    {% include 'inc/_study-years-navigation.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="materials-content-container partial-main-container">
+    <div class="m-t-3">
+
+        <!--блок навигации по таблицам-->
+        <nav class="materials-navigation">
+            {% for table in tables %}
+            {% if not table.empty %}
+                <a href="#{{ table.olympiad }}" class="materials-navigation-element">{{ table.short_olympiad_name }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+
+        <!--Таблицы с материалами-->
+        <section class="olympiads-materials">
+            {% for table in tables %}
+            {% if not table.empty %}
+                <header><h2 id="{{ table.olympiad }}" class="headers partial-secondary-header-font">{{ table.olympiad }}</h2></header>
+                <article class="materials-content">
+                    <table class="shadow-box materials-table">
+                        <tr class="timetable-table-header">
+                            <th><div class="materials-columns-header">Учебный год / этап</div></th>
+                            {% for stage in table.stages %}
+                                <th><div class="materials-columns-header">{{ stage }}</div></th>
+                            {% endfor %}
+                        </tr>
+                        {% for row_key, row_value in table.materials.items %}
+                            <tr class="timetable-row">
+                                <td><div class="materials-cell">{{ row_key }}</div></td>
+                                {% for stage_key, stage_value in row_value.items %}
+                                    <td>
+                                        {% for item in stage_value %}
+                                        <div class="timetable-cell">
+                                            <a class="external-link materials" href="{{ item.task }}" target="_blank">{{ item.task_title }}</a>
+                                            <a class="external-link materials" href="{{ item.solution }}" target="_blank">{{ item.solution_title }}</a>
+                                        </div>
+                                        {% endfor %}
+                                    </td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </article>
+            {% endif %}
+            {% endfor %}
+        </section>
+
+    </div>
+</div>
+{% endblock %}

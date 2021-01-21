@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'learning/css/content.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'learning/css/content_media.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation_media.css' %}" type="text/css">
+{% endblock %}
+
+{% block study-years-navigation %}
+    {% include 'inc/_study-years-navigation.html' %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="partial-main-container">
+
+        <!--Верхняя полоса навигации-->
+        <nav class="learning-navigation">
+            <a class="learning-navigation-box learning-navigation-section" href="/learning/{{ row.0.study_year }}/">{{ row.0.section.title }}</a>
+            <div class="learning-navigation-box regular-font"> > </div>
+            <div class="learning-navigation-box regular-font">{{ row.0.topic.title }}</div>
+        </nav>
+        
+        <article>
+            <!--Теория и видео-->
+            <div class="shadow-box content-box learning-theory-box">
+                <h2 class="headers partial-secondary-header-font">Конспект</h2>
+                <div class="regular-font">{{ row.0.theory|safe }}</div>
+                <div class="learning-video-container">
+                    <div class="learning-video"><iframe src="{{ row.0.video_link }}" frameborder="0"></iframe></div>
+                </div>
+            </div>
+
+            <!--Задачи-->
+            <div class="shadow-box content-box learning-theory-box">
+                <h2 class="headers partial-secondary-header-font">Задачи</h2>
+                {% for task in tasks %}
+
+                    <!--Задание-->
+                    <div class="regular-font inline-block-box m-b-2">{{ task.task|safe }}</div>
+<!--                    <form action="" method="post">-->
+<!--                        {% csrf_token %}-->
+<!--                        {{ form.as_p }}-->
+<!--                        <button type="submit">Отправить</button>-->
+<!--                    </form>-->
+
+                    <!--Численый ответ-->
+                    <div class="m-b-1 regular-font">
+                        <div id="answer-headers" class="headers triangle-list">Показать ответ</div>
+                        <div class="invisible p-l-15 m-b-2">{{ task.answer }}</div>
+                    </div>
+
+                    <!--Решение-->
+                    <div class="m-b-1 regular-font">
+                        <div id="solution-headers" class="headers triangle-list">Показать решение</div>
+                        <div class="invisible p-l-15">
+                            <div class="inline-block-box m-b-2">{{ task.solution|safe }}</div>
+                            {% if task.video_solution_link|length > 0 %}
+                                <div class="headers">Видео-решение:</div>
+                                <div class="solution-video-container">
+                                    <div class="learning-video"><iframe src="{{ task.video_solution_link }}" frameborder="0"></iframe></div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <hr class="m-b-2">
+
+                {% endfor %}
+            </div>
+        </article>
+
+    </div>
+
+    <script>
+        let answer = document.querySelectorAll('#answer-headers');
+        answer.forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.target.classList.toggle('open')
+                e.target.nextElementSibling.classList.toggle('invisible')
+            });
+        });
+
+        let solution = document.querySelectorAll('#solution-headers');
+        solution.forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.target.classList.toggle('open')
+                e.target.nextElementSibling.classList.toggle('invisible')
+            });
+        });
+    </script>
+
+{% endblock %}

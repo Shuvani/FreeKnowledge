@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'img/icon.png' %}" type="image/png">
+        <link href="{% static 'fonts/Raleway-Regular.ttf' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/base_media.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'fontawesome/css/all.css' %}">
+        {% block styles %}{% endblock %}
+        <script src="{% static 'js/node_modules/jquery/dist/jquery.js' %}"></script>
+        <script src="{% static 'js/node_modules/mathjax/es5/tex-chtml.js' %}"></script>
+        <title>FreeKnowledge</title>
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>{% include 'inc/_navigation.html' %}</header>
+            <main>
+                {% block study-years-navigation %}{% endblock %}
+                {% block content %}{% endblock %}
+            </main>
+            <footer>{% include 'inc/_footer.html' %}</footer>
+        </div>
+    </body>
+
+<!--    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+</html>

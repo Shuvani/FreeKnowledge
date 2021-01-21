@@ -1,0 +1,139 @@
+/*Styles-----------------------------------------------------------------------*/
+.m-b-1{
+    margin-bottom: 1vh;
+}
+.content-font {
+    /*Шрифт обычного текста*/
+    font-size: var(--regular-text);
+}
+.primary-header-font {
+    /*Шрифт первостепенных заголовков*/
+    font-size: var(--primary-header);
+}
+.secondary-header-font {
+    /*Шрифт второстепенных заголовков*/
+    font-size: var(--secondary-header);
+}
+
+/*Links-----------------------------------------------------------------------*/
+.external-link{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.external-link:hover{
+    font-weight: bold;
+}
+.external-link:visited{
+    color: var(--primary-color);
+}
+
+/*Headers-----------------------------------------------------------------------*/
+.headers {
+    /*Стиль стандартных заголовков*/
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 2vh;/*отступ между заголовком и текстом в стандартном своем состоянии*/
+}
+.freeknowledge-header {
+    /*Заголовок левого блока, в которм описание сайта*/
+    margin-bottom: 6.5vh;
+}
+.telegram-header-container{
+    /*Контейнер блока телеграм из правого контейнера*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.telegram-img{
+    /*Заголовок блока телеграм состоит из картинки и текста*/
+    display: inline-block;
+    width: 3vw;
+}
+/*Заголовок блока телеграм состоит из картинки и текста*/
+.telegram-header{
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+/*Boxes-------------------------------------------------------------------------*/
+.site-description-box {
+    /*Левый блок с описанием сайта*/
+    margin-right: 1vw;
+}
+.content-box {
+    /*Блок с контекстом*/
+    padding: 1.5vh 1vw 1vh 1vw;
+}
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+.telegram-box, .nearest-olympiads-box{
+    /*Двум первым блокам из правого контейнера нужно установить отступ снизу*/
+    margin-bottom: 4vh;
+}
+
+/*Main content---------------------------------------------------------------*/
+.whole-main-container{
+    /*весь контент помещен в это поле*/
+    display: flex;
+    margin: 1vh 2vw 0 2vw;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: calc(100vh - 15vh);
+    padding-bottom: 6vh;
+}
+.main-content-container {
+    /* для того, чтобы весь контент распологался по центру*/
+    display: flex;
+}
+.paragraph {
+    /*Это параграфы текста из левого блока с основным контентом*/
+    text-indent: 1.5vw;
+    line-height: 1.5em;
+    margin-bottom: 6.5vh;
+}
+.right-content-block{
+    /*правый контейнер, который содержит блоки телеграм, таблица и новости*/
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-width: 34vw;
+    margin-left: 1vw;
+}
+
+/*Table--------------------------------------------------------------------*/
+.nearest-olympiads-table {
+    /*Стили общие для всей таблицы*/
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    text-align: center;
+}
+.nearest-olympiads-table-header{
+    /*Стили заголовка таблицы*/
+    background: var(--secondary-color);
+    border: 0.1vh solid var(--secondary-color);
+    font-size: 1.1vw;
+}
+.nearest-olympiads-columns-header {
+    /*Отступы вокруг текста в хэдере таблицы*/
+    margin: 0.4vh 0.4vw;
+}
+.nearest-olympiads-row {
+    /*Стили для строк таблицы*/
+    border: 0.1vh solid rgba(0, 0, 0, 0.20);
+    border-collapse: collapse;
+    font-size: 1.1vw;
+}
+.nearest-olympiads-cell{
+    /*Отступы вокруг текста в ячейках таблицы*/
+    margin: 0.4vh 0.2vw 0.4vh 0;
+}
+
+/*News--------------------------------------------------------------------------*/
+.news-content {
+    /*Чтобы нумерация иста не выезжала влево*/
+    margin-left: var(--regular-text);
+}

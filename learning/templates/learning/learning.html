@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'learning/css/learning.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'learning/css/learning_media.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/study_years_navigation_media.css' %}" type="text/css">
+{% endblock %}
+
+{% block study-years-navigation %}
+    {% include 'inc/_study-years-navigation.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="partial-main-container">
+
+        <section class="learning-content">
+            {% for block in blocks %}
+                {% if not block.empty %}
+                        <div class="learning-box shadow-box">
+                            <h2 class="headers partial-secondary-header-font">{{ block.section }}</h2>
+                            <ul class="topics">
+                                {% for value in block.topics %}
+                                    <a href="{% url 'learning_content' value.id %}" class="external-link"><li>{{ value.topic.title }}</li></a>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                {% endif %}
+            {% endfor %}
+        </section>
+
+    </div>
+
+{% endblock %}

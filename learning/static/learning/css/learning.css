@@ -1,0 +1,55 @@
+/*Styles-----------------------------------------------------------------------*/
+.partial-secondary-header-font{
+    /*Заголовки блоков страницы*/
+    font-size: var(--partial-secondary-header);
+}
+
+/*Links-----------------------------------------------------------------------*/
+.external-link{
+    color: var(--link-color);
+    text-decoration: none;
+}
+.external-link:hover{
+    font-weight: bold;
+}
+.external-link:visited{
+    color: var(--primary-color);
+}
+
+/*Headers----------------------------------------------------------------------*/
+.headers {
+    /*Стиль для заголовков*/
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+/*Boxes------------------------------------------------------------------------*/
+.learning-box {
+    width: 27%;
+    padding: 2vh 1.5vw;
+    margin-bottom: 5vh;
+}
+.shadow-box{
+    /*Блок которому нужна рамка-тень*/
+    background: #fff;
+    box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+}
+
+/*Main content---------------------------------------------------------------*/
+.partial-main-container {
+    /*весь контент помещен в это поле*/
+    margin: 2vh 2vw 0 2vw;
+    padding-bottom: 6vh;
+}
+.learning-content {
+    min-width: 95%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2vh 2vw;
+}
+.topics {
+    margin: 1.5vh 1.5vw 0 1.5vw;
+    font-size: var(--regular-text);
+}

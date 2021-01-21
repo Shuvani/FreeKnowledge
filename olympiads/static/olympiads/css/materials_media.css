@@ -1,0 +1,97 @@
+@media (max-width: 1200px) {
+    /*Styles-----------------------------------------------------------------------*/
+    .content-font {
+        font-size: calc(1.4*var(--regular-text));
+    }
+    .partial-secondary-header-font{
+        font-size: calc(1.4*var(--partial-secondary-header));
+    }
+
+    /*Navigation bar-----------------------------------------------------------*/
+    .materials-navigation {
+        font-size: calc(1.4*1.15vw);
+        width: 12vw;
+    }
+    /*Olympiads materials---------------------------------------------------------*/
+    .olympiads-materials {
+        margin-left: 14vw;
+    }
+    /*Table--------------------------------------------------------------------*/
+    .timetable-table-header {
+        font-size: calc(1.4*var(--additional-header));
+    }
+    .materials-columns-header {
+        font-size: calc(1.4*var(--additional-header));
+        width: 14vw;
+    }
+    .timetable-row {
+        font-size: calc(1.4*1.15vw);
+    }
+    .timetable-cell {
+        width: 14vw;
+    }
+}
+@media (max-width: 854px) {
+    /*Styles-----------------------------------------------------------------------*/
+    .partial-secondary-header-font{
+        font-size: 1.1rem;
+    }
+    /*Main content---------------------------------------------------------------*/
+    .materials-content-container {
+        display: block;
+    }
+    /*Navigation bar-----------------------------------------------------------*/
+    .materials-navigation {
+        font-size: 0.9rem;
+        width: 5.5rem;
+    }
+    /*Olympiads materials---------------------------------------------------------*/
+    .olympiads-materials {
+        margin-left: 7.5rem;
+    }
+    .materials-content{
+        overflow-x: scroll;
+    }
+    /*Table--------------------------------------------------------------------*/
+    .materials-columns-header {
+        font-size: 0.9rem;
+        width: 7.5rem;
+    }
+    .timetable-row {
+        font-size: 0.8rem;
+    }
+    .timetable-cell {
+        width: 7.5rem;
+    }
+}
+@media (max-width: 600px) {
+    /*Navigation bar-----------------------------------------------------------*/
+     .materials-navigation {
+         background: #fff;
+         box-shadow: 0.1vh 0.1vh 0.5vh rgba(0, 0, 0, 0.25);
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         height: auto;
+         margin: 0 auto 2rem auto;
+         overflow-y: auto;
+         padding: 1rem 0 0 0;
+         position: relative;
+         width: 83%;
+    }
+    .materials-navigation-element {
+        display: inline-block;
+        margin: 0 1rem 1rem 1rem;
+        padding-bottom: 0;
+    }
+    /*Olympiads materials---------------------------------------------------------*/
+    .olympiads-materials {
+        margin-left: 0;
+    }
+}
+@media (max-height: 600px) {
+    /*Main content--------------------*/
+    .partial-main-container{
+        padding-bottom: 3rem;
+    }
+}

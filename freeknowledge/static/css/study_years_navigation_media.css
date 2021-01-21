@@ -1,0 +1,20 @@
+@media (max-width: 1200px) {
+    .study-years-wrapper {
+        font-size: calc(1.4*var(--additional-header));
+        width: 60%;
+    }
+}
+@media (max-width: 854px) {
+    .study-years-wrapper {
+        font-size: 0.95rem;
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+    .study-years-wrapper {
+        width: 80%;
+    }
+    .study-years {
+        flex-wrap: wrap;
+    }
+}

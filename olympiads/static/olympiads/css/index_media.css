@@ -1,0 +1,174 @@
+@media (max-width: 1200px) {
+    /*Styles--------------------------*/
+    .content-font {
+        font-size: calc(1.4*var(--regular-text));
+    }
+    .primary-header-font {
+        font-size: calc(1.4*var(--primary-header));
+    }
+    .secondary-header-font {
+        font-size: calc(1.5*var(--secondary-header));
+    }
+    /*Headers-------------------------*/
+    .freeknowledge-header {
+        margin-bottom: 2vh;
+    }
+    .telegram-header-container {
+        justify-content: center;
+    }
+    .telegram-img{
+        display: none;
+    }
+    .telegram-box, .nearest-olympiads-box, .news-box {
+        min-width: 43%;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+    .nearest-olympiads-box, .news-box {
+        margin-left: 2vw;
+    }
+    /*Main content--------------------*/
+    .whole-main-container{
+        margin: 3vh 3vw 0 3vw;
+        padding-bottom: 8vh;
+    }
+    .main-content-container {
+        flex-direction: column-reverse;
+    }
+    .paragraph {
+        margin-bottom: 2vh;
+        text-align: left;
+    }
+    .right-content-block {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+    /*Table---------------------------*/
+    .nearest-olympiads-table-header, .nearest-olympiads-row {
+        font-size: calc(1.5*1.1vw);
+    }
+    /*News----------------------------*/
+    .news-content {
+        text-align: left;
+        margin-left: calc(1.5*var(--regular-text));
+    }
+}
+@media (max-width: 854px) {
+    /*Styles--------------------------*/
+    .m-b-1{
+        margin-bottom: 2vh;
+    }
+    .content-font {
+        font-size: calc(1.6*var(--regular-text));
+    }
+    .primary-header-font {
+        font-size: calc(1.5*var(--primary-header));
+    }
+    .secondary-header-font {
+        font-size: calc(1.7*var(--secondary-header));
+    }
+    /*Boxes---------------------------*/
+    .site-description-box {
+        margin-right: 0;
+    }
+    .content-box {
+       padding: 1.5vh 2.5vw 1vh 2.5vw;
+    }
+    .telegram-box, .nearest-olympiads-box, .news-box {
+        width: 100%;
+    }
+    .nearest-olympiads-box, .news-box {
+        margin-left: 0;
+    }
+    /*Table---------------------------*/
+    .nearest-olympiads-table {
+        max-width: 98%;
+        margin: 0 1vw;
+    }
+    .nearest-olympiads-table-header, .nearest-olympiads-row {
+        font-size: calc(1.7*1.1vw);
+    }
+    /*News----------------------------*/
+    .news-content {
+        margin-left: calc(1.7*var(--regular-text));
+    }
+}
+@media (max-width: 768px) {
+    /*Styles--------------------------*/
+    .content-font {
+        font-size: calc(2*var(--regular-text));
+    }
+    .primary-header-font {
+        font-size: calc(1.6*var(--primary-header));
+    }
+    .secondary-header-font {
+        font-size: calc(1.9*var(--secondary-header));
+    }
+    /*Table---------------------------*/
+    .nearest-olympiads-table-header, .nearest-olympiads-row {
+        font-size: calc(2*1.1vw);
+    }
+    /*News----------------------------*/
+    .news-content {
+        margin-left: calc(2*var(--regular-text));
+    }
+}
+@media (max-width: 600px) {
+    /*Styles--------------------------*/
+    .content-font {
+        font-size: calc(2.3*var(--regular-text));
+    }
+    .primary-header-font {
+        font-size: calc(1.9*var(--primary-header));
+    }
+    .secondary-header-font {
+        font-size: calc(2.1*var(--secondary-header));
+    }
+    /*Table---------------------------*/
+    .nearest-olympiads-table-header, .nearest-olympiads-row {
+        font-size: calc(2.3*1.1vw);
+    }
+    /*News----------------------------*/
+    .news-content {
+        margin-left: calc(2.3*var(--regular-text));
+    }
+}
+@media ( max-width: 510px) {
+    /*Styles--------------------------*/
+    .content-font {
+        font-size: 0.8rem;
+    }
+    .primary-header-font {
+        font-size: 1.1rem;
+    }
+    .secondary-header-font {
+        font-size: 0.95rem;
+    }
+    /*Boxes---------------------------*/
+    .nearest-olympiads-box {
+        overflow-x: scroll;
+    }
+    /*Main content--------------------*/
+    .whole-main-container{
+        padding-bottom: 2rem;
+    }
+    /*Table---------------------------*/
+    .nearest-olympiads-table-header, .nearest-olympiads-row {
+        font-size: 0.8rem;
+    }
+    .nearest-olympiads-cell {
+        min-width: 140px;
+    }
+    /*News----------------------------*/
+    .news-content {
+        margin-left: 0.8rem;
+    }
+}
+@media (max-height: 600px) {
+    /*Main content--------------------*/
+    .whole-main-container{
+        padding-bottom: 3rem;
+    }
+}
