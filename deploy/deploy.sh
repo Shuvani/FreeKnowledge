@@ -1,9 +1,10 @@
 #!/bin/bash
 
-PROJECT_GIT_URL='https://github.com/Shuvani/FreeKnowledge.git'
-PROJECT_BASE_PATH='/opt/venv/freeknowledge'
-
 sudo su -
+
+PROJECT_GIT_URL='https://github.com/Shuvani/FreeKnowledge.git'
+
+PROJECT_BASE_PATH='/opt/venv/freeknowledge'
 
 echo "Installing dependencies..."
 apt-get update
@@ -18,15 +19,11 @@ source /opt/venv/bin/activate
 pip install gunicorn
 
 # Create project directory
-# . ./second.sh
-git clone 'https://github.com/Shuvani/FreeKnowledge.git' '/opt/venv/freeknowledge'
-#expect ./git_data.sh
+git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 #install project dependencies
 pip install -r $PROJECT_BASE_PATH/requirements.txt
 cd $PROJECT_BASE_PATH/freeknowledge/static/js
-#apt-get install nodejs
-#apt-get install npm
 npm install
 
 #configure nginx
