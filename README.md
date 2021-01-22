@@ -1,7 +1,21 @@
-git clone 
+## Структура приложения
+* deploy - скрипты и файлы для деплоя приложения на сервер
+* freeknowledge - основные файлы django приложения (автоматически создаются при создании нового приложения)
+* learning - Все для страницы "Обучение"
+* olympiads - Все для страницы "Главная" и "Олимпиады"
+* templates - базовые шаблоны всего приложения
 
-cd freeknowledge/freeknowledge/static/js
+## Установка на новый сервер:
+* freeknowledge/settings.py -> изменить первый ip-address в ALLOWED_HOSTS на public ip вашего сервера
+* in GitHub select deploy.sh file -> click on Raw -> copy the URL-> in the server's command line enter the folwing comand 
+    ```html
+      curl -sL <your_url> | sudo bash -
+    ```
 
-npm i
-
-cd ../../../
+## Перезалить на сервер
+* push changes to the GitHub
+* 
+    ```html
+      cd /opt/venv/freeknowledge/
+      sudo sh ./deploy/update.sh
+    ```
