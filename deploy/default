@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name 3.8.202.185;
+    server_name 18.133.223.121; #change this to your public ip
     access_log  /var/log/nginx/example.log;
 
     location /static/ {

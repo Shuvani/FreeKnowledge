@@ -1,3 +1,5 @@
+#!/bin/bash
+
 PROJECT_GIT_URL='https://github.com/Shuvani/FreeKnowledge.git'
 PROJECT_BASE_PATH='/opt/venv/freeknowledge'
 
@@ -5,8 +7,8 @@ sudo su -
 
 echo "Installing dependencies..."
 apt-get update
-apt-get upgrade
-apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm supervisor
+yes | apt-get upgrade
+yes | apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm supervisor
 
 # create virtual environment and activate it
 python3 -m venv /opt/venv
@@ -17,6 +19,7 @@ pip install gunicorn
 
 # Create project directory
 git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
+# тут вероятно нужно извращаться с паролем/логином
 
 #install project dependencies
 pip install -r $PROJECT_BASE_PATH/requirements.txt
