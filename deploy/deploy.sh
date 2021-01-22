@@ -19,7 +19,7 @@ pip install gunicorn
 
 # Create project directory
 # . ./second.sh
-expect ./second.sh
+expect ./git_data.sh
 # тут вероятно нужно извращаться с паролем/логином
 
 #install project dependencies
