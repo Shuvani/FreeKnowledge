@@ -19,7 +19,7 @@ pip install gunicorn
 
 # Create project directory
 # . ./second.sh
-git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
+git clone 'https://github.com/Shuvani/FreeKnowledge.git' '/opt/venv/freeknowledge'
 #expect ./git_data.sh
 
 #install project dependencies
