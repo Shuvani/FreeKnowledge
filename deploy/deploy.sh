@@ -18,7 +18,8 @@ source /opt/venv/bin/activate
 pip install gunicorn
 
 # Create project directory
-git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
+# . ./second.sh
+expect ./second.sh
 # тут вероятно нужно извращаться с паролем/логином
 
 #install project dependencies
