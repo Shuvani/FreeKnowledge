@@ -19,8 +19,8 @@ pip install gunicorn
 
 # Create project directory
 # . ./second.sh
-expect ./git_data.sh
-# тут вероятно нужно извращаться с паролем/логином
+curl -sL https://raw.githubusercontent.com/Shuvani/FreeKnowledge/master/deploy/git_data.sh?token=AMKTD2DJ7HKQBNOSHTMO4F3ABLHNU | expect
+#expect ./git_data.sh
 
 #install project dependencies
 pip install -r $PROJECT_BASE_PATH/requirements.txt

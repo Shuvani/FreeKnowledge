@@ -3,8 +3,6 @@
 PROJECT_GIT_URL='https://github.com/Shuvani/FreeKnowledge.git'
 PROJECT_BASE_PATH='/opt/venv/freeknowledge'
 
-
-
 spawn git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 expect "Username for 'https://github.com': "
 send "Shuvani\r"
