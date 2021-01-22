@@ -8,7 +8,7 @@ sudo su -
 echo "Installing dependencies..."
 apt-get update
 yes | apt-get upgrade
-yes | apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm supervisor
+yes | apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm supervisor expect
 
 # create virtual environment and activate it
 python3 -m venv /opt/venv
@@ -19,7 +19,7 @@ pip install gunicorn
 
 # Create project directory
 # . ./second.sh
-/usr/bin/expect ./second.sh
+expect ./second.sh
 # тут вероятно нужно извращаться с паролем/логином
 
 #install project dependencies
