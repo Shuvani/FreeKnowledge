@@ -4,7 +4,7 @@ server {
     access_log  /var/log/nginx/example.log;
 
     location /static/ {
-        root /opt/venv/freeknowledge/;
+        root /data/venv/freeknowledge/;
         expires 30d;
     }
 

@@ -4,7 +4,7 @@ sudo su -
 
 PROJECT_GIT_URL='https://github.com/Shuvani/FreeKnowledge.git'
 
-PROJECT_BASE_PATH='/opt/venv/freeknowledge'
+PROJECT_BASE_PATH='/data/venv/freeknowledge'
 
 echo "Installing dependencies..."
 apt-get update
@@ -13,7 +13,7 @@ yes | apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm 
 
 # create virtual environment and activate it
 python3 -m venv /opt/venv
-source /opt/venv/bin/activate
+source /data/venv/bin/activate
 
 #install gunicorn
 pip install gunicorn
