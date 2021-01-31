@@ -41,3 +41,9 @@
 ```html
   sudo umount /data
 ```
+
+## Если вдруг не выходит зайти в админку
+```html
+  chown nobody /data/venv/freeknowledge/
+  chown nobody /data/venv/freeknowledge/db.sqlite3
+```
