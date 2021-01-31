@@ -12,7 +12,7 @@ yes | apt-get upgrade
 yes | apt-get install python3-dev python3-pip python3-venv nginx git nodejs npm supervisor expect
 
 # create virtual environment and activate it
-python3 -m venv /opt/venv
+python3 -m venv /data/venv
 source /data/venv/bin/activate
 
 #install gunicorn

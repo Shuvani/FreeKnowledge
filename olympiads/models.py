@@ -10,7 +10,7 @@ class Olympiads(models.Model):
     def clean(self):
         if ord(self.title[0]) < 1040 or ord(self.title[0]) > 1071:
             raise ValidationError("Название олимпиады должно начинаться с большой буквы")
-        if ord(self.short_name[0]) < 1040 or ord(self.short_name[0]) > 1071:
+        if len(self.short_name) > 0 and (ord(self.short_name[0]) < 1040 or ord(self.short_name[0]) > 1071):
             raise ValidationError("Сокращенное название олимпиады должно начинаться с большой буквы")
 
     def __str__(self):
