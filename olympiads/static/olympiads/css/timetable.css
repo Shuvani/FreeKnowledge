@@ -47,7 +47,6 @@
     /*контейнер для таблицы*/
     background: #fff;
     border-collapse: collapse;
-    text-align: center;
     width: 100%;
 }
 .timetable-table-header {
@@ -55,10 +54,11 @@
     background: var(--secondary-color);
     border: 0.1vh solid var(--secondary-color);
     font-size: var(--additional-header);
+    text-align: left;
 }
 .timetable-columns-header {
     /*Ячейки в заголовке таблицы*/
-    margin: 0.7vh 0;
+    margin: 0.7vh 1vw;
 }
 .timetable-row {
     /*Строки таблицы*/
@@ -69,6 +69,15 @@
 .timetable-cell {
     /*Ячейки таблицы*/
     margin: 1vh 1vw;
+}
+.w-35 {
+    width: 35%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-20 {
+    width: 20%;
 }
 
 /*Images---------------------*/

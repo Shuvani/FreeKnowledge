@@ -29,18 +29,18 @@
                         </tr>
                         {% for key, values in rows.items %}
                         <tr class="timetable-row">
-                            <td><div class="timetable-cell">{{ key }}</div></td>
-                            <td>
+                            <td class="w-35"><div class="timetable-cell">{{ key }}</div></td>
+                            <td class="w-25">
                                 {% for value in values %}
                                 <div class="timetable-cell">{{ value.stage }}</div>
                                 {% endfor %}
                             </td>
-                            <td>
+                            <td class="w-20">
                                 {% for value in values %}
                                 <div class="timetable-cell">{{ value.date_interval }}</div>
                                 {% endfor %}
                             </td>
-                            <td><a class="external-link" href="{{ values.0.link }}" target="_blank">{{ values.0.short_name }}</a></td>
+                            <td class="w-20"><a class="external-link timetable-cell" href="{{ values.0.link }}" target="_blank">{{ values.0.short_name }}</a></td>
                         </tr>
                         {% endfor %}
                     </table>
