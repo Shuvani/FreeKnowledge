@@ -1,8 +1,12 @@
-#!/usr/bin/venv bash
+#!/bin/bash
 
 sudo su -
 
+echo "Updating project..."
+
 PROJECT_BASE_PATH='/data/venv/freeknowledge'
+
+source /data/venv/bin/activate
 
 cd $PROJECT_BASE_PATH
 git pull
