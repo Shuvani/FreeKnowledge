@@ -27,7 +27,7 @@ SECRET_KEY = 'mtti0%u=4js%zr66tc10frb4cvld9o*2$jlcmci2e0jx+-s1vj'
 DEBUG = True
 
 # '0.0.0.0', '192.168.0.99'
-ALLOWED_HOSTS = ['18.130.11.116', '127.0.0.1']
+ALLOWED_HOSTS = ['18.130.11.116', '127.0.0.1', 'knowfree.ru', 'www.knowfree.ru']
 
 
 # Application definition
