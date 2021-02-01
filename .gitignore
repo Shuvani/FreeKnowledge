@@ -1,5 +1,6 @@
 FreeknowledgeKey.pem
 db.sqlite3
-deploy/default_with_ssl
+media/
 static/
+deploy/default_with_ssl
 freeknowledge/static/js/node_modules/
