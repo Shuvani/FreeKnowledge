@@ -1,4 +1,4 @@
-/FreeknowledgeKey.pem
-/db.sqlite3
-/static/
-/freeknowledge/static/js/node_modules/
+FreeknowledgeKey.pem
+db.sqlite3
+static/
+freeknowledge/static/js/node_modules/

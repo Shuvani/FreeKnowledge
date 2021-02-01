@@ -1,10 +1,8 @@
 #!/bin/bash
 
-sudo su -
+PROJECT_BASE_PATH='/data/venv/freeknowledge'
 
 echo "Updating project..."
-
-PROJECT_BASE_PATH='/data/venv/freeknowledge'
 
 source /data/venv/bin/activate
 
