@@ -1,5 +1,6 @@
 FreeknowledgeKey.pem
 db.sqlite3
+__pycache__/
 media/
 static/
 deploy/default_with_ssl
