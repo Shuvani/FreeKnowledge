@@ -33,8 +33,7 @@
 * push changes to the GitHub
 * 
     ```html
-      cd /opt/venv/freeknowledge/
-      sudo sh ./deploy/update.sh
+      sudo bash /data/venv/freeknowledge/deploy/update.sh
     ```
   
 ## Удалить с сервера
