@@ -46,3 +46,8 @@
   chown nobody /data/venv/freeknowledge/
   chown nobody /data/venv/freeknowledge/db.sqlite3
 ```
+
+## Обновить сертификат 2 мая 
+```html
+    sudo letsencrypt certonly --webroot -w /data/venv/freeknowledge -d knowfree.ru
+```
