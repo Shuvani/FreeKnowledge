@@ -3,5 +3,6 @@ db.sqlite3
 **/__pycache__/
 media/
 static/
+**/**/__pycache__/
 deploy/default_with_ssl
 freeknowledge/static/js/node_modules/
